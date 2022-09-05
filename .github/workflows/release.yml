@@ -6,12 +6,12 @@ on:
     branches:
       - devel
 
-permissions: {}
+permissions:
+  pull-requests: write
 
 jobs:
   release:
     name: Release
-    if: github.repository_owner == 'submariner-io'
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
